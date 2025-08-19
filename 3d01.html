@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+     <script 
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+   </script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+
+<a-scene mindar-image="imageTargetSrc: 
+  https://cdn.glitch.global/dda8266d-4879-4580-a82f-32f5d95dc42e/targets%20-ozuap01.mind;" 
+  color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" 
+  device-orientation-permission-ui="enabled: false">
+  
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+  <a-assets>
+  <img id="card" 
+src="https://cdn.glitch.global/dda8266d-4879-4580-a82f-32f5d95dc42e/ozumap590.png" />
+
+<a-asset-item id="avatarModel" src="https://cdn.glitch.global/dda8266d-4879-4580-a82f-32f5d95dc42e/pokopencar01.glb">
+  </a-asset-item>
+</a-assets>
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+  <a-entity mindar-image-target="targetIndex: 0">
+<a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+
+ 	<model-viewer preload poster="assets/asset.jpeg" src="https://cdn.glitch.global/dda8266d-4879-4580-a82f-32f5d95dc42e/pokopencar01.glb" 
+                ios-src="https://cdn.glitch.global/afa3d159-2af9-4ce5-9438-bb1377497e6b/touju.usdz?v=1681081937862" 
+		      auto-rotate camera-controls ar alt="サンプル"></model-viewer>	
+    
+    
+  </a-entity>
+    
+    </a-scene>
+    
+		
+  </body>
+</html>
