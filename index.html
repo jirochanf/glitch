@@ -13,12 +13,12 @@
 <div class="example-container">
 <div id="example-scanning-overlay" class="hidden">
 <div class="inner">
-<img src="2024_ura.jpg"/>  <!-- オーバーレイ画像定義 -->
+<img src="./etc/2024_ura.jpg"/>  <!-- オーバーレイ画像定義 -->
 <div class="scanline"></div>
 </div>
 </div>
 
-<a-scene mindar-image="imageTargetSrc: /etc/targets_2024ura.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+<a-scene mindar-image="imageTargetSrc: ./etc/targets_2024ura.mind; showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 
 <a-assets>
   <img id="card" src="https://jirochanf.github.io/card/assets/ura.jpg" />
@@ -30,11 +30,11 @@
   <img id="icon-play" src="https://jirochanf.github.io/card/assets/play.png" />
   <img id="icon-left" src="https://jirochanf.github.io/card/assets/left.png" />
   <img id="icon-right" src="https://jirochanf.github.io/card/assets/right.png" />
-  <img id="preview" src="/etc/2024_ura_start.png" />
-  <video id="video-mp4" muted autoplay="false" loop="false" src="/etc/2024meishi.mp4"></video>
+  <img id="preview" src="./etc/2024_ura_start.png" />
+  <video id="video-mp4" muted autoplay="false" loop="false" src="./etc/2024meishi.mp4"></video>
 <!--video再生はmp4でなくwebmとなっている原因究明中-->
-	<video id="video-webm" muted autoplay="false" loop="false" src="/etc/glitch76.webm"></video> 
-
+	<video id="video-webm" muted autoplay="false" loop="false" src="./etc/glitch76.webm"></video> 
+./
   <img crossorigin="anonymous" id="preview2" src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide1.jpg" />
   <img crossorigin="anonymous" id="preview3" src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide2.jpg" />
   <img crossorigin="anonymous" id="preview4" src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide3.jpg" />
