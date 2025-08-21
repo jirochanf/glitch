@@ -1,1 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+   <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
 
+    <script src="main18.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://jirochanf.github.io/card/assets/webar.css"
+    />
+  </head>
+
+  <body>
+    <div class="example-container">
+      <div id="example-scanning-overlay" class="hidden">
+        <div class="inner">
+          <img
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/2024_ura.jpg"
+          />
+          <!-- オーバーレイ画像定義 -->
+          <div class="scanline"></div>
+        </div>
+      </div>
+
+      <a-scene
+        mindar-image="imageTargetSrc: https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/targets_2024ura.mind; showStats: false; uiScanning: #example-scanning-overlay;"
+        embedded
+        color-space="sRGB"
+        renderer="colorManagement: true, physicallyCorrectLights"
+        vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false"
+      >
+        <a-assets>
+          <img
+            id="card"
+            src="https://jirochanf.github.io/card/assets/ura.jpg"
+          />
+          <img
+            id="icon-web"
+            src="https://jirochanf.github.io/card/assets/web.png"
+          />
+          <img
+            id="icon-location"
+            src="https://jirochanf.github.io/card/assets/youtube.png"
+          />
+          <img
+            crossorigin="anonymous"
+            id="icon-profile"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/icon2024.png"
+          />
+          <img
+            id="icon-phone"
+            src="https://jirochanf.github.io/card/assets/phone.png"
+          />
+          <img
+            id="icon-email"
+            src="https://jirochanf.github.io/card/assets/email.png"
+          />
+          <img
+            id="icon-play"
+            src="https://jirochanf.github.io/card/assets/play.png"
+          />
+          <img
+            id="icon-left"
+            src="https://jirochanf.github.io/card/assets/left.png"
+          />
+          <img
+            id="icon-right"
+            src="https://jirochanf.github.io/card/assets/right.png"
+          />
+          <img
+            id="preview"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/2024_ura_start.png"
+          />
+          <video
+            id="video-mp4"
+            muted
+            autoplay="false"
+            loop="false"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/2024meishi.mp4"
+          ></video>
+          <!--  <video id="video-webm" muted autoplay="false" loop="false" src="https://jirochanf.github.io/card/assets/kyoto.webm"></video> -->
+
+          <img
+            crossorigin="anonymous"
+            id="preview2"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide1.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview3"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide2.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview4"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide3.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview5"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide4.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview6"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide5.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview7"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide6.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview8"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide7.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview9"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide8.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="preview10"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide9.jpg"
+          />
+          <img
+            crossorigin="anonymous"
+            id="ura"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/slide10.jpg"
+          />
+
+          <!--3Dmodel-->
+          <a-asset-item
+            id="pokopen"
+            src="https://cdn.glitch.global/dda8266d-4879-4580-a82f-32f5d95dc42e/pokopencar01.glb?v=1683256206083"
+          ></a-asset-item>
+          <a-asset-item
+            id="roman"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/roman.glb?v=1703135703631"
+          ></a-asset-item>
+          <a-asset-item
+            id="earth"
+            src="https://cdn.glitch.global/cbf17ad1-1348-4ae7-b9c3-7207634324f5/earth.glb?v=1703136258036"
+          ></a-asset-item>
+        </a-assets>
+
+        <a-camera
+          position="0 0 0"
+          look-controls="enabled: false"
+          cursor="fuse: false; rayOrigin: mouse;"
+          raycaster="far: 10000; objects: .clickable"
+        >
+        </a-camera>
+
+        <!-- target0 確認後-->
+        <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+          <a-entity visible="false" id="panel" position="0 0 -0.01">
+            <!--  ポートフォリオ表示部　動画  -->
+            <a-entity id="panel-item0">
+              <a-video
+                id="video-link"
+                webkit-playsinline
+                playsinline
+                width="1"
+                height="0.552"
+                position="0 0 0"
+              ></a-video>
+              <a-image
+                id="preview-button"
+                class="clickable"
+                src="#preview"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <!--  スライド　  -->
+            <a-entity id="panel-item1" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview2"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item2" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview3"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item3" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview4"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item4" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview5"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item5" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview6"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item6" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview7"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item7" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview8"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item8" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview9"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+            <a-entity id="panel-item9" visible="false">
+              <a-image
+                class="clickable"
+                src="#preview10"
+                alpha-test="0.5"
+                position="0 0 0"
+                height="0.552"
+                width="1"
+              >
+              </a-image>
+            </a-entity>
+
+            <!--  操作ボタン　  -->
+            <a-image
+              visible="false"
+              id="left-button"
+              class="clickable"
+              src="#icon-left"
+              position="-0.7 0 0"
+              height="0.15"
+              width="0.15"
+            ></a-image>
+            <a-image
+              visible="false"
+              id="right-button"
+              class="clickable"
+              src="#icon-right"
+              position="0.7 0 0"
+              height="0.15"
+              width="0.15"
+            ></a-image>
+            <a-image
+              visible="false"
+              id="profile-button"
+              class="clickable"
+              src="#icon-profile"
+              position="-0.42 -0.5 0"
+              height="0.15"
+              width="0.15"
+              link="href: mailto:fujiwara@yomde.net;"
+            ></a-image>
+            <a-image
+              visible="false"
+              id="web-button"
+              class="clickable"
+              src="#icon-web"
+              alpha-test="0.5"
+              position="-0.14 -0.5 0"
+              height="0.15"
+              width="0.15"
+              link="href: https://netken.info/; title: My Home Page;"
+            ></a-image>
+            <a-image
+              visible="false"
+              id="email-button"
+              class="clickable"
+              src="#icon-email"
+              position="0.14 -0.5 0"
+              height="0.15"
+              width="0.15"
+              link="href: mailto:akechan@yomde.net;"
+            ></a-image>
+            <a-image
+              visible="false"
+              id="location-button"
+              class="clickable"
+              src="#icon-location"
+              position="0.42 -0.5 0"
+              height="0.15"
+              width="0.15"
+              link="href: https://www.youtube.com/channel/UC262c4cdRkfrllw37mpUKOA/videos; title: Senior Travel;"
+            ></a-image>
+            <a-image
+              visible="false"
+              id="namecard"
+              class="clickable"
+              src="#ura"
+              position="0.55 0.6 0"
+              height="0.5"
+              width="0.75"
+              link="href: https://webar-senior.glitch.me/; title: BihindSide;"
+            ></a-image>
+          </a-entity>
+
+          <!--  js範囲外　  -->
+
+          <a-gltf-model
+            src="#earth"
+            position="-0.3 0.8 0"
+            rotation="0 -180 0"
+            scale="0.4 0.4 0.4"
+          ></a-gltf-model>
+
+          <a-text
+            id="text1"
+            value="Visit my YouTube Channel!"
+            color="yellow"
+            align="center"
+            width="2"
+            height="0.1"
+            position="0 -0.7 0"
+          ></a-text>
+
+          <!-- target0 消失-->
+        </a-entity>
+      </a-scene>
+    </div>
+  </body>
+</html>
