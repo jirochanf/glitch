@@ -73,11 +73,11 @@
             document.querySelector("#video-mp4").pause();
             is_playing = false;
            } 
-//追加
+//追加 修正
             } else {
-              document.querySelector("#video-link").setAttribute("src", "#video-mp4");
-              document.querySelector("#video-mp4").muted = false; 
-              document.querySelector("#video-mp4").play();
+              document.querySelector("#video-link").setAttribute("src", "#video-webm");
+              document.querySelector("#video-webm").muted = false; 
+              document.querySelector("#video-webm").play();
             }
           });
 
